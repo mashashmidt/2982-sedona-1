@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Masha Shmidt](https://up.htmlacademy.ru/adaptive/12/user/2982).
-* Наставник: [Sergey Kozlov].
+* Наставник: [Sergey Kozlov](https://htmlacademy.ru/profile/id27386).
 
 ---
 
