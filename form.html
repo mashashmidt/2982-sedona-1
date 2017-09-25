@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Седона - главная страница</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="#" width="102" height="83" alt="Логотип Седоны">
+     </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__menu site-menu">
+        <li class="site-menu__item">
+          <a href="#">Главная</a>
+        </li>
+        <li class="site-menu__item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="site-menu__item site-menu__item--active">
+          <a>Форма отзыва</a>
+        </li>
+        <li class="site-menu__item">
+          <a href="#">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <img class="main-intro form-intro" src="#" width="320" height="389" alt="Добро пожаловать в Седону">
+    <section class="page-description">
+      <h2 class="page-description__title">Оставьте свой отзыв</h2>
+      <p class="page-description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </section>
+    <form class="form" action="/echo" method="post">
+      <fieldset class="form__block form-block">
+        <legend class="form-block__title">Представьтесь:</legend>
+        <label for="name">Имя*:</label>
+        <input type="text" id="name" name="name" value="Петр" required>
+        <label for="surname">Фамилия*:</label>
+        <input type="text" id="surname" name="surname" value="Иванов" required>
+        <label for="patronymic">Отчество:</label>
+        <input type="text" id="patronymic" name="patronymic" value="Александрович">
+      </fieldset>
+      <fieldset class="form__block form-block">
+        <legend class="form-block__title">Контактная информация:</legend>
+        <label for="tel">Контактный телефон*:</label>
+        <input type="tel" name="tel" value="Введите телефон" required>
+        <label for="email">Электронная почта*:</label>
+        <input type="email" name="email" value="Введите e-mail" required>
+      </fieldset>
+      <fieldset class="form__block form-block">
+        <legend class="form-block__title">Ваше общее впечатление:</legend>
+        <label>
+          <input type="radio" name="experience" value="plus" checked> Скорее положительное
+        </label>
+        <label>
+          <input type="radio" name="experience" value="minus"> Скорее отрицательное
+        </label>
+        <label>
+          <input type="radio" name="experience" value="no-var"> Затрудняюсь ответить
+        </label>
+      </fieldset>
+      <fieldset class="form__block form-block">
+        <legend class="form-block__title">Посещенные достопримечательности:</legend>
+        <input type="checkbox" name="bridge" id="devils-bridge" checked>
+        <label for="devils-bridge">Мост Дьявола</label>
+        <input type="checkbox" name="park" id="slide-park" checked>
+        <label for="slide-park">Слайд-парк</label>
+        <input type="checkbox" name="mountain" id="mountain-bell">
+        <label for="mountain-bell">Гора Колокол</label>
+        <input type="checkbox" name="cliff" id="red-cliff" checked>
+        <label for="red-cliff">Красные скалы</label>
+      </fieldset>
+      <fieldset class="form__block form-block">
+        <legend class="form-block__title">Опишите свои эмоции:</legend>
+        <textarea name="review" id="review-field" rows="10">Опишите подробно все свои восторги</textarea>
+      </fieldset>
+      <input type="submit" value="Отправить отзыв">
+    </form>
+  </main>
+  <footer class="page-footer">
+    <b class="page-footer__hashtag">#Visitsedona</b>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">Youtube</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано:</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__image" src="#" width="27" height="34" alt="HTML Academy">
+            </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
