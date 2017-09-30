@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Седона - главная страница</title>
+  <title>Седона - форма отзыва</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
           <a href="#">Главная</a>
         </li>
         <li class="site-menu__item">
-          <a href="#">Фото и видео</a>
+          <a href="#">Фото и&nbsp;видео</a>
         </li>
         <li class="site-menu__item site-menu__item--active">
           <a>Форма отзыва</a>
@@ -31,78 +31,108 @@
   </header>
 
   <main class="page-main">
-    <img class="main-intro form-intro" src="#" width="320" height="389" alt="Добро пожаловать в Седону">
+    <div class="main-intro form-intro"></div>
+    <h1 class="visually-hidden">Отзыв о путешествии</h1>
     <section class="page-description">
       <h2 class="page-description__title">Оставьте свой отзыв</h2>
-      <p class="page-description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <p class="page-description__text">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
     </section>
     <form class="form" action="/echo" method="post">
       <fieldset class="form__block form-block">
         <legend class="form-block__title">Представьтесь:</legend>
-        <label for="name">Имя*:</label>
-        <input type="text" id="name" name="name" value="Петр" required>
-        <label for="surname">Фамилия*:</label>
-        <input type="text" id="surname" name="surname" value="Иванов" required>
-        <label for="patronymic">Отчество:</label>
-        <input type="text" id="patronymic" name="patronymic" value="Александрович">
+        <div class="form-block__field">
+          <label for="name">Имя*:</label>
+          <input type="text" id="name" name="name" placeholder="Петр" required>
+        </div>
+        <div class="form-block__field">
+          <label for="surname">Фамилия*:</label>
+          <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+        </div>
+        <div class="form-block__field">
+          <label for="patronymic">Отчество:</label>
+          <input type="text" id="patronymic" name="patronymic" placeholder="Александрович">
+        </div>
       </fieldset>
       <fieldset class="form__block form-block">
         <legend class="form-block__title">Контактная информация:</legend>
-        <label for="tel">Контактный телефон*:</label>
-        <input type="tel" name="tel" value="Введите телефон" required>
-        <label for="email">Электронная почта*:</label>
-        <input type="email" name="email" value="Введите e-mail" required>
+        <div class="form-block__field">
+          <label for="tel">Контактный телефон*:</label>
+          <input type="tel" name="tel" placeholder="Введите телефон" required>
+          <span class="form__icons phone"></span>
+        </div>
+        <div class="form-block__field">
+          <label for="email">Электронная почта*:</label>
+          <input type="email" name="email" placeholder="Введите e-mail" required>
+          <span class="form__icons envelope"></span>
+        </div>
       </fieldset>
       <fieldset class="form__block form-block">
         <legend class="form-block__title">Ваше общее впечатление:</legend>
-        <label>
-          <input type="radio" name="experience" value="plus" checked> Скорее положительное
-        </label>
-        <label>
-          <input type="radio" name="experience" value="minus"> Скорее отрицательное
-        </label>
-        <label>
-          <input type="radio" name="experience" value="no-var"> Затрудняюсь ответить
-        </label>
+        <div class="form-block__field">
+          <label>
+            <input type="radio" name="experience" value="plus" checked>
+            <span class="radio__item">Скорее положительное</span>
+          </label>
+        </div>
+        <div class="form-block__field">
+          <label>
+            <input type="radio" name="experience" value="minus">
+            <span class="radio__item">Скорее отрицательное</span>
+          </label>
+        </div>
+        <div class="form-block__field">
+          <label>
+            <input type="radio" name="experience" value="no-var">
+            <span class="radio__item">Затрудняюсь ответить</span>
+          </label>
+        </div>
       </fieldset>
       <fieldset class="form__block form-block">
         <legend class="form-block__title">Посещенные достопримечательности:</legend>
-        <input type="checkbox" name="bridge" id="devils-bridge" checked>
-        <label for="devils-bridge">Мост Дьявола</label>
-        <input type="checkbox" name="park" id="slide-park" checked>
-        <label for="slide-park">Слайд-парк</label>
-        <input type="checkbox" name="mountain" id="mountain-bell">
-        <label for="mountain-bell">Гора Колокол</label>
-        <input type="checkbox" name="cliff" id="red-cliff" checked>
-        <label for="red-cliff">Красные скалы</label>
+        <div class="form-block__field">
+          <input type="checkbox" name="attractions[]" value="bridge" id="devils-bridge" checked>
+          <label for="devils-bridge">Мост Дьявола</label>
+        </div>
+        <div class="form-block__field">
+          <input type="checkbox" name="attractions[]" value="park" id="slide-park" checked>
+          <label for="slide-park">Слайд-парк</label>
+        </div>
+        <div class="form-block__field">
+          <input type="checkbox" name="attractions[]" value="mountain" id="mountain-bell">
+          <label for="mountain-bell">Гора Колокол</label>
+        </div>
+        <div class="form-block__field">
+          <input type="checkbox" name="attractions[]" value="cliff" id="red-cliff" checked>
+          <label for="red-cliff">Красные скалы</label>
+        </div>
       </fieldset>
       <fieldset class="form__block form-block">
-        <legend class="form-block__title">Опишите свои эмоции:</legend>
-        <textarea name="review" id="review-field" rows="10">Опишите подробно все свои восторги</textarea>
+        <div class="form-block__field">
+          <label for="review-field">Опишите свои эмоции:</label>
+          <textarea name="review" id="review-field" placeholder="Опишите подробно все свои восторги"></textarea>
+        </div>
       </fieldset>
-      <input type="submit" value="Отправить отзыв">
+      <button class="form__submit" type="submit">Отправить отзыв</button>
     </form>
   </main>
   <footer class="page-footer">
-    <b class="page-footer__hashtag">#Visitsedona</b>
+    <a class="page-footer__hashtag" href="#">#Visitsedona</a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">Youtube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано:</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="#" width="27" height="34" alt="HTML Academy">
-            </a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
     </div>
   </footer>
 
