@@ -31,11 +31,9 @@
   </header>
 
   <main class="page-main">
-    <div class="main-intro form-intro"></div>
-    <h1 class="visually-hidden">Отзыв о путешествии</h1>
-    <section class="page-description">
-      <h2 class="page-description__title">Оставьте свой отзыв</h2>
-      <p class="page-description__text">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
+    <section class="page-intro">
+      <h2 class="page-intro__title">Оставьте свой отзыв</h2>
+      <p class="page-intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
     </section>
     <form class="form" action="/echo" method="post">
       <fieldset class="form__block form-block">
@@ -58,12 +56,10 @@
         <div class="form-block__field">
           <label for="tel">Контактный телефон*:</label>
           <input type="tel" name="tel" placeholder="Введите телефон" required>
-          <span class="form__icons phone"></span>
         </div>
         <div class="form-block__field">
           <label for="email">Электронная почта*:</label>
           <input type="email" name="email" placeholder="Введите e-mail" required>
-          <span class="form__icons envelope"></span>
         </div>
       </fieldset>
       <fieldset class="form__block form-block">
@@ -107,8 +103,10 @@
         </div>
       </fieldset>
       <fieldset class="form__block form-block">
-        <div class="form-block__field">
+        <legend class="form-block__title">
           <label for="review-field">Опишите свои эмоции:</label>
+        </legend>
+        <div class="form-block__field">
           <textarea name="review" id="review-field" placeholder="Опишите подробно все свои восторги"></textarea>
         </div>
       </fieldset>
@@ -117,19 +115,17 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__hashtag" href="#">#Visitsedona</a>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
+      </li>
+    </ul>
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано:</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
