@@ -1,0 +1,17 @@
+.icons {
+  background-color: #ffffff;
+  &__item {
+    &--house {
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
+    }
+    &--present {
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+    }
+    &--burger {
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}

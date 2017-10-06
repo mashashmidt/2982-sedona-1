@@ -1,0 +1,20 @@
+.page-intro {
+  background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+
+  &--main {
+    background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  &__text {
+    line-height: 26px;
+  }
+}

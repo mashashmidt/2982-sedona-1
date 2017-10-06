@@ -1,0 +1,25 @@
+.features {
+  &__item {
+    &--blue {
+      background-color: #81b3d2;
+
+      .features__title {
+        color: #ffffff;
+      }
+
+      .features__text {
+        color: #ffffff;
+      }
+    }
+
+    &--grey {
+      background-color: #eeeeee;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+}
