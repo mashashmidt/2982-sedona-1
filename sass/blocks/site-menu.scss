@@ -1,0 +1,19 @@
+.site-menu {
+  background-color: #81b3d2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 2.2em;
+    color: #ffffff;
+    font-weight: bold;
+  }
+}

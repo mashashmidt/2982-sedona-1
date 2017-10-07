@@ -1,0 +1,27 @@
+.features {
+  $block: &;
+
+  &__item {
+    &--blue {
+      background-color: #81b3d2;
+
+      #{$block}__title {
+        color: #ffffff;
+      }
+
+      #{$block}__text {
+        color: #ffffff;
+      }
+    }
+
+    &--grey {
+      background-color: #eeeeee;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+}
