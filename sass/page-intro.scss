@@ -1,10 +1,15 @@
 .page-intro {
-  background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-
-  &--main {
-    background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+  &__image {
+    background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
+  }
+
+  &--main &__image {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto, contain, cover;
+    background-position-y: bottom, center, center;
+    height: 390px;
   }
 
   &__title {

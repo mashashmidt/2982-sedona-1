@@ -1,9 +1,9 @@
-@import "reset";
 @import "site-menu";
 @import "page-intro";
 @import "icons";
 @import "features";
 @import "main-nav";
+@import "page-header";
 
 @font-face {
   font-family: "PT Sans";
@@ -19,6 +19,14 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  display: none;
+}
+
 body {
   background: #ffffff;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -28,4 +36,8 @@ body {
   color: #333333;
   text-transform: uppercase;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
