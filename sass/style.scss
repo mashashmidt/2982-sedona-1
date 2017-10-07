@@ -1,31 +1,7 @@
-@import "reset";
+@import "normalize";
+@import "general";
 @import "site-menu";
 @import "page-intro";
 @import "icons";
 @import "features";
 @import "main-nav";
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-body {
-  background: #ffffff;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 21px;
-  color: #333333;
-  text-transform: uppercase;
-  margin: 0;
-}

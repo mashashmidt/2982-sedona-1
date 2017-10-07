@@ -9,12 +9,13 @@
 
   &__title {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 1.4em;
     color: #000000;
     font-weight: bold;
   }
 
   &__text {
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 1.8em;
   }
 }
