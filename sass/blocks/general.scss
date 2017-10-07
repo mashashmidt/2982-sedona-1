@@ -19,7 +19,7 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.5em;
+  line-height: 1.5;
   color: #333333;
   text-transform: uppercase;
   margin: 0;
@@ -35,4 +35,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
