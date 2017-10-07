@@ -1,13 +1,15 @@
 .features {
+  $block: &;
+
   &__item {
     &--blue {
       background-color: #81b3d2;
 
-      .features__title {
+      #{$block}__title {
         color: #ffffff;
       }
 
-      .features__text {
+      #{$block}__text {
         color: #ffffff;
       }
     }
@@ -19,7 +21,7 @@
 
   &__title {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 1.4;
     font-weight: bold;
   }
 }
