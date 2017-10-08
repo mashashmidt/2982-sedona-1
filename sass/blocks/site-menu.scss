@@ -3,10 +3,12 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     flex-direction: row;
     background-color: #ffffff;
     justify-content: space-around;
+    align-content: center;
+    height: 100%;
   }
 
   &__item {
@@ -15,11 +17,27 @@
     color: #ffffff;
     font-weight: bold;
 
-    @media (min-width: 768px) {
+    &:nth-child(2) {
+      @media (min-width: $tablet) {
+        margin-right: 100px;
+
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $tablet) {
+        margin-left: 100px;
+
+      }
+    }
+
+    @media (min-width: $tablet) {
       font-size: 14px;
-      line-height: 26px;
+      line-height: 1;
       color: #000000;
       font-weight: bold;
+      flex-grow: 1;
+      width: 25%;
     }
 
     &:first-child a {
@@ -39,10 +57,14 @@
       border-top: 1px solid #9ac2db;
       border-bottom: 1px solid #678fa8;
 
-      @media (min-width: 768px) {
-        display: block;
+      @media (min-width: $tablet) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         color: #000000;
-        padding: 25px 50px;
+        padding: 0;
+
         border: none;
       }
     }

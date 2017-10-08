@@ -1,6 +1,19 @@
 .features {
   $block: &;
 
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #81b3d2;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: bottom;
+    background-position-x: center;
+  }
+
   &__item {
     text-align: center;
 
@@ -8,18 +21,21 @@
       background-color: #81b3d2;
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet) {
         flex-direction: row;
       }
 
       #{$block}__title {
         color: #ffffff;
+        width: 278px;
       }
 
       #{$block}__text {
         color: #ffffff;
+        width: 278px;
       }
     }
 
@@ -32,7 +48,7 @@
     width: 280px;
     margin: 0 auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       width: 256px;
       flex-direction: row;
     }

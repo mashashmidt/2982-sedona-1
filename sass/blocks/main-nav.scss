@@ -1,5 +1,13 @@
 .main-nav {
   width: 100%;
 
+  @media (min-width: $tablet) {
+    height: 100%;
+  }
 
+  &__toggle {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
 }
