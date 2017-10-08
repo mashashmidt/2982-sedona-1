@@ -1,0 +1,62 @@
+.features-item {
+  &:first-child .features-item__title {
+    @include number(1)
+  }
+  &:nth-child(2) .features-item__title {
+    @include number(2)
+  }
+  &:nth-child(3) .features-item__title {
+    @include number(3)
+  }
+  &:nth-child(4) .features-item__title {
+    @include number(4)
+  }
+  &:nth-child(5) .features-item__title {
+    @include number(5)
+  }
+  &--blue {
+    background-color: #81b3d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &--grey {
+    background-color: #eeeeee;
+    width: 280px;
+  }
+  &--reversed {
+    @media (min-width: $tablet) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 278px;
+    padding: 40px 20px;
+    @media (min-width: $tablet) {
+      width: 256px;
+      padding: 0 30px;
+    }
+    @media (min-width: $desktop) {
+      width: 400px;
+      padding: 0 60px;
+    }
+  }
+  &__image {
+    @media (min-width: $tablet) {
+      flex-grow: 1;
+    }
+  }
+}

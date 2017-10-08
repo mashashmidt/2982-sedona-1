@@ -1,6 +1,5 @@
 .features {
   $block: &;
-
   &:before {
     content: "";
     display: block;
@@ -12,51 +11,16 @@
     background-size: auto;
     background-position-y: bottom;
     background-position-x: center;
-  }
-
-  &__item {
-    text-align: center;
-
-    &--blue {
-      background-color: #81b3d2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      @media (min-width: $tablet) {
-        flex-direction: row;
-      }
-
-      #{$block}__title {
-        color: #ffffff;
-        width: 278px;
-      }
-
-      #{$block}__text {
-        color: #ffffff;
-        width: 278px;
-      }
-    }
-
-    &--grey {
-      background-color: #eeeeee;
-    }
-  }
-
-  &__container {
-    width: 280px;
-    margin: 0 auto;
 
     @media (min-width: $tablet) {
-      width: 256px;
-      flex-direction: row;
+      display: none;
     }
   }
-
-  &__title {
-    font-size: 18px;
-    line-height: 1.4;
-    font-weight: bold;
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    text-align: center;
   }
 }

@@ -42,3 +42,20 @@ ul, ol {
   padding: 0;
   list-style: none;
 }
+
+h2, p {
+  margin: 0;
+}
+
+@mixin number($num) {
+
+  &:after {
+    content: "— №"+$num+" —";
+    display: block;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: normal;
+    padding: 20px 0;
+  }
+}
