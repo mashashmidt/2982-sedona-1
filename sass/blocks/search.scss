@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  & > * {
+    width: 280px;
+
+    @media (min-width: $tablet) {
+      width: 458px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 0.9;
+    color: #000000;
+  }
+}

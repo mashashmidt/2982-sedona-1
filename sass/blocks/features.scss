@@ -18,7 +18,8 @@
   }
   &__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   &__item {
     text-align: center;

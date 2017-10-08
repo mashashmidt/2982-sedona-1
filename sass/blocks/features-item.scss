@@ -24,11 +24,25 @@
     @media (min-width: $tablet) {
       flex-direction: row;
       flex-wrap: wrap;
+      width: 100%;
     }
   }
   &--grey {
     background-color: #eeeeee;
-    width: 280px;
+    padding: 30px 20px;
+    border-bottom: 1px solid #d6d6d6;
+    width: 100%;
+
+    &:last-child {
+      border: none;
+    }
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      width: 33%;
+      flex-grow: 1;
+
+    }
   }
   &--reversed {
     @media (min-width: $tablet) {
