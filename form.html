@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Седона - форма отзыва</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -52,15 +54,17 @@
           <input type="text" id="patronymic" name="patronymic" placeholder="Александрович">
         </div>
       </fieldset>
-      <fieldset class="form__block form-block">
+      <fieldset class="form__block form-block form-block--contacts">
         <legend class="form-block__title">Контактная информация:</legend>
-        <div class="form-block__field">
-          <label for="tel">Контактный телефон*:</label>
-          <input type="tel" name="tel" placeholder="Введите телефон" required>
-        </div>
-        <div class="form-block__field">
-          <label for="email">Электронная почта*:</label>
-          <input type="email" name="email" placeholder="Введите e-mail" required>
+        <div class="form-block__wrapper">
+          <div class="form-block__field">
+            <label for="tel">Контактный телефон*:</label>
+            <input type="tel" name="tel" placeholder="Введите телефон" required>
+          </div>
+          <div class="form-block__field">
+            <label for="email">Электронная почта*:</label>
+            <input type="email" name="email" placeholder="Введите e-mail" required>
+          </div>
         </div>
       </fieldset>
       <fieldset class="form__block form-block">
@@ -84,23 +88,26 @@
           </label>
         </div>
       </fieldset>
-      <fieldset class="form__block form-block">
+      <fieldset class="form__block form-block form-block--attractions">
         <legend class="form-block__title">Посещенные достопримечательности:</legend>
-        <div class="form-block__field">
-          <input type="checkbox" name="attractions[]" value="bridge" id="devils-bridge" checked>
-          <label for="devils-bridge">Мост Дьявола</label>
-        </div>
-        <div class="form-block__field">
-          <input type="checkbox" name="attractions[]" value="park" id="slide-park" checked>
-          <label for="slide-park">Слайд-парк</label>
-        </div>
-        <div class="form-block__field">
-          <input type="checkbox" name="attractions[]" value="mountain" id="mountain-bell">
-          <label for="mountain-bell">Гора Колокол</label>
-        </div>
-        <div class="form-block__field">
-          <input type="checkbox" name="attractions[]" value="cliff" id="red-cliff" checked>
-          <label for="red-cliff">Красные скалы</label>
+        <div class="form-block__wrapper">
+          <!-- https://stackoverflow.com/questions/28078681/why-cant-fieldset-be-flex-containers -->
+          <div class="form-block__field">
+            <input type="checkbox" name="attractions[]" value="bridge" id="devils-bridge" checked>
+            <label for="devils-bridge">Мост Дьявола</label>
+          </div>
+          <div class="form-block__field">
+            <input type="checkbox" name="attractions[]" value="park" id="slide-park" checked>
+            <label for="slide-park">Слайд-парк</label>
+          </div>
+          <div class="form-block__field">
+            <input type="checkbox" name="attractions[]" value="mountain" id="mountain-bell">
+            <label for="mountain-bell">Гора Колокол</label>
+          </div>
+          <div class="form-block__field">
+            <input type="checkbox" name="attractions[]" value="cliff" id="red-cliff" checked>
+            <label for="red-cliff">Красные скалы</label>
+          </div>
         </div>
       </fieldset>
       <fieldset class="form__block form-block">
