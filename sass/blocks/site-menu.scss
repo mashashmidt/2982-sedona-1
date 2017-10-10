@@ -1,5 +1,5 @@
 .site-menu {
-  background-color: #81b3d2;
+
   display: flex;
   flex-direction: column;
 
@@ -20,14 +20,12 @@
     &:nth-child(2) {
       @media (min-width: $tablet) {
         margin-right: 100px;
-
       }
     }
 
     &:nth-child(3) {
       @media (min-width: $tablet) {
         margin-left: 100px;
-
       }
     }
 
@@ -38,6 +36,7 @@
       font-weight: bold;
       flex-grow: 1;
       width: 25%;
+      background-color: #ffffff;
     }
 
     &:first-child a {
@@ -47,25 +46,55 @@
     &:last-child a {
       border-bottom: none;
     }
+  }
 
-    a {
-      display: block;
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      color: #ffffff;
-      border-top: 1px solid #9ac2db;
-      border-bottom: 1px solid #678fa8;
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
+    background-color: #81b3d2;
 
-      @media (min-width: $tablet) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        color: #000000;
-        padding: 0;
+    &:hover {
+      background-color: #669ec0;
+    }
 
-        border: none;
+    &:focus {
+      background-color: #5496bd;
+      color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: #000000;
+      padding: 0;
+      border: none;
+      background-color: #ffffff;
+
+      &:hover {
+        color: #a3c7de;
+      }
+
+      &:focus {
+        color: #c7c7c7;
+      }
+
+      &--active {
+        color: #88786d;
+
+        &:hover {
+          color: #604e43;
+        }
+
+        &:focus {
+          color: #d6d0cc;
+        }
       }
     }
   }
