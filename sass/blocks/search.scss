@@ -1,4 +1,4 @@
-.search {
+  .search {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,15 +8,45 @@
 
   & > * {
     width: 280px;
-
     @media (min-width: $tablet) {
       width: 458px;
     }
   }
 
   &__title {
-    font-size: 30px;
-    line-height: 0.9;
+    font-size: 21px;
+    line-height: 1.2;
     color: #000000;
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 0.9;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &__button {
+    background-color: #81b3d2;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: bold;
+    padding: 20px 0;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+      color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+    }
   }
 }

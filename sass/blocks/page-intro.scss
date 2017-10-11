@@ -6,14 +6,12 @@
   align-items: center;
   width: 100%;
 
-  & > * {
+  &>* {
     width: 278px;
-
     @media (min-width: $tablet) {
       width: 540px;
     }
   }
-
   &:before {
     content: "";
     display: block;
@@ -26,7 +24,6 @@
     background-position-y: bottom, bottom;
     background-position-x: center, center;
   }
-
   &--main:before {
     content: "";
     display: block;
@@ -38,18 +35,15 @@
     background-size: auto, cover;
     background-position-y: bottom, bottom;
     background-position-x: center, center;
-
     @media (min-width: $tablet) {
       height: 518px;
     }
   }
-
   &__image {
     @media (min-width: $tablet) {
       width: 512px;
     }
   }
-
   &__title {
     font-size: 18px;
     line-height: 1.4;
@@ -62,8 +56,14 @@
       font-size: 21px;
       line-height: 1.2;
     }
-  }
 
+    &--photo {
+      @media (min-width: $tablet) {
+        font-size: 30px;
+        line-height: 0.9;
+      }
+    }
+  }
   &__text {
     font-size: 14px;
     line-height: 1.8;
