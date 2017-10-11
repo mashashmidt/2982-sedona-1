@@ -1,0 +1,32 @@
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet) {
+      width: 648px;
+      align-items: center;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+
+    @media (min-width: $tablet) {
+      border: none;
+      padding: 0;
+    }
+  }
+}

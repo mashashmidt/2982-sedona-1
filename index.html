@@ -15,67 +15,71 @@
       <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">Открыть меню</button>
       <ul class="main-nav__menu site-menu">
-        <li class="site-menu__item site-menu__item--active">
-          <a>Главная</a>
+        <li class="site-menu__item">
+          <a class="site-menu__link site-menu__link--active" href="index.html">Главная</a>
         </li>
         <li class="site-menu__item">
-          <a href="#">Фото и&nbsp;видео</a>
+          <a class="site-menu__link" href="photo.html">Фото и&nbsp;видео</a>
         </li>
         <li class="site-menu__item">
-          <a href="#">Форма отзыва</a>
+          <a class="site-menu__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="site-menu__item">
-          <a href="#">HTML Academy</a>
+          <a class="site-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </li>
       </ul>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">Открыть меню</button>
     </nav>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">Добро пожаловать в&nbsp;Седону</h1>
     <section class="page-intro page-intro--main">
-      <h2 class="page-intro__title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслужвающий большего!</h2>
+      <h2 class="page-intro__title">Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!</h2>
       <p class="page-intro__text">Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче чем гранд каньон!</p>
     </section>
     <section class="features">
       <ol class="features__list">
-        <li class="features__item features__item--blue">
-          <h2 class="features__title">Настоящий городок</h2>
-          <p class="features__text">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
-          <img class="features__image" src="./img/main-city-mobile@1x.jpg" width="320" height="260" alt="Настоящий городок">
-          <ul class="features__icons icons">
-            <li class="icons__item icons__item--house">
-              <h2 class="icons__title">Жилье</h2>
+        <li class="features__item features-item features-item--blue">
+          <div class="features-item__container">
+            <h2 class="features-item__title">Настоящий городок</h2>
+            <p class="features-item__text">Седона не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <img class="features-item__image" src="./img/main-city-mobile@1x.jpg" width="320" height="260" alt="Настоящий городок">
+          <ul class="features-item__icons icons">
+            <li class="icons__item">
+              <h2 class="icons__title icons__title--house">Жилье</h2>
               <p class="icons__text">Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!</p>
             </li>
-            <li class="icons__item icons__item--present">
-              <h2 class="icons__title">Сувениры</h2>
+            <li class="icons__item">
+              <h2 class="icons__title icons__title--present">Сувениры</h2>
               <p class="icons__text">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
             </li>
-            <li class="icons__item icons__item--burger">
-              <h2 class="icons__title">Еда</h2>
+            <li class="icons__item">
+              <h2 class="icons__title icons__title--burger">Еда</h2>
               <p class="icons__text">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
             </li>
           </ul>
         </li>
-        <li class="features__item features__item--blue">
-          <h2 class="features__title">Там есть мост дьявола</h2>
-          <p class="features__text">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно</p>
-          <img class="features__image" src="./img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Там есть мост дьявола">
+        <li class="features__item features-item features-item--blue features-item--reversed">
+          <div class="features-item__container">
+            <h2 class="features-item__title">Там есть мост дьявола</h2>
+            <p class="features-item__text">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно</p>
+          </div>
+          <img class="features-item__image" src="./img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Там есть мост дьявола">
         </li>
-        <li class="features__item features__item--grey">
-          <h2 class="features__title">Небольшая площадь</h2>
-          <p class="features__text">Все интересные места находятся очень близко</p>
+        <li class="features__item features-item features-item--grey">
+          <h2 class="features-item__title">Небольшая площадь</h2>
+          <p class="features-item__text">Все интересные места находятся очень близко</p>
         </li>
-        <li class="features__item features__item--grey">
-          <h2 class="features__title">Красивая дорога</h2>
-          <p class="features__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+        <li class="features__item features-item features-item--grey">
+          <h2 class="features-item__title">Красивая дорога</h2>
+          <p class="features-item__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
         </li>
-        <li class="features__item features__item--grey">
-          <h2 class="features__title">Мало туристов</h2>
-          <p class="features__text">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
+        <li class="features__item features-item features-item--grey">
+          <h2 class="features-item__title">Мало туристов</h2>
+          <p class="features-item__text">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
         </li>
       </ol>
     </section>
@@ -86,7 +90,7 @@
     </section>
     <section class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418731.1189384804!2d-111.5960119065372!3d34.92308758809994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1473371950849"
-        width="1200" height="595" frameborder="0" style="border:0" allowfullscreen></iframe>
+        width="100%" height="595" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
   </main>
   <footer class="page-footer">
@@ -103,7 +107,7 @@
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано:</p>
+      <p class="copyright__text">Разработано</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
     </div>
   </footer>

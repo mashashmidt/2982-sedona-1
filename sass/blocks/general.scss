@@ -1,7 +1,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans.woff") format("woff");
-  src: url("./fonts/ptsans.woff2") format("woff2");
+  src: url("../fonts/ptsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,8 +19,44 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.5em;
+  line-height: 1.5;
   color: #333333;
   text-transform: uppercase;
   margin: 0;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, p {
+  margin: 0;
+}
+
+@mixin number($num) {
+
+  &:after {
+    content: "— №"+$num+" —";
+    display: block;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: normal;
+    padding: 20px 0;
+  }
 }

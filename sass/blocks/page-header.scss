@@ -1,3 +1,21 @@
 .page-header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 400px; /*убрать после гамбургера*/
+
+  @media (min-width: $tablet) {
+    height: 56px;
+  }
+
+  &__logo {
+    order: 1;
+    width: 102px;
+    align-self: center;
+    z-index: 10;
+
+    @media (min-width: $tablet) {
+      margin-top: -56px;
+    }
+  }
 }

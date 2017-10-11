@@ -1,0 +1,39 @@
+.form {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 960px;
+  }
+
+  &__block {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      @media (min-width: $tablet) {
+        width: 50%;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $tablet) {
+        order: -1;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+}

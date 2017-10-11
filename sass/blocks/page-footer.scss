@@ -1,0 +1,35 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 244px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 120px;
+  }
+
+  & > * {
+    width: 278px;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 33%;
+    }
+  }
+
+  &__hashtag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+  }
+}

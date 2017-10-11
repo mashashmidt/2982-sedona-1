@@ -1,0 +1,36 @@
+.gallery-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &:first-child {
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: 50%;
+    flex-grow: 1
+  }
+
+  @media (min-width: $desktop) {
+    width: 33%;
+    flex-grow: 1
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 280px;
+
+    @media (min-width: $tablet) {
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+  }
+
+}
