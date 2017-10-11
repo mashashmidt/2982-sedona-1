@@ -62,6 +62,13 @@
       font-size: 21px;
       line-height: 1.2;
     }
+
+    &--photo {
+      @media (min-width: $tablet) {
+        font-size: 30px;
+        line-height: 0.9;
+      }
+    }
   }
 
   &__text {

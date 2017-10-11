@@ -28,9 +28,18 @@
   }
 
   &__title {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #000000;
+
     @media (min-width: $tablet) {
       font-size: 30px;
       line-height: 0.9;
     }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }

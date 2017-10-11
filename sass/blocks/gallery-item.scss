@@ -2,6 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  color: #000000;
 
   &:first-child {
     @media (min-width: $tablet) {
@@ -31,6 +33,21 @@
       width: 100%;
       background-color: #f2f2f2;
     }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &__author {
+    text-transform: none;
+    font-weight: normal;
+    color: #333333;
+  }
+
+  &__likes {
+    color: #000000;
   }
 
 }
