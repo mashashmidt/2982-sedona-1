@@ -10,105 +10,106 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
-    </a>
-    <nav class="main-nav">
-      <ul class="main-nav__menu site-menu">
-        <li class="site-menu__item">
-          <a class="site-menu__link" href="index.html">Главная</a>
+  <div class="container">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__menu site-menu">
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link site-menu__link--active" href="photo.html">Фото и&nbsp;видео</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-intro page-main--photo">
+        <h2 class="page-intro__title page-intro__title--photo">Фото и&nbsp;видео</h2>
+        <p class="page-intro__text">Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.</p>
+      </section>
+      <section class="gallery">
+        <ul class="gallery__list">
+          <li class="gallery__item gallery-item">
+            <div class="gallery-item__wrapper">
+              <img class="gallery-item__image" src="./img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
+              <h3 class="gallery-item__title">Неродные просторы</h3>
+              <p class="gallery-item__author">Автор фото: Борис</p>
+              <a class="gallery-item__likes" href="#">1350</a>
+            </div>
+          </li>
+          <li class="gallery__item gallery-item">
+            <div class="gallery-item__wrapper">
+              <img class="gallery-item__image" src="./img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
+              <h3 class="gallery-item__title">Местная растительность</h3>
+              <p class="gallery-item__author">Автор фото: Сергей</p>
+              <a class="gallery-item__likes" href="#">143</a>
+            </div>
+          </li>
+          <li class="gallery__item gallery-item">
+            <div class="gallery-item__wrapper">
+              <img class="gallery-item__image" src="./img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+              <h3 class="gallery-item__title">Дорога на&nbsp;север</h3>
+              <p class="gallery-item__author">Автор фото: Петр</p>
+              <a class="gallery-item__likes" href="#">96</a>
+            </div>
+          </li>
+          <li class="gallery__item gallery-item">
+            <div class="gallery-item__wrapper">
+              <img class="gallery-item__image" src="./img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+              <h3 class="gallery-item__title">Мост дьявола</h3>
+              <p class="gallery-item__author">Автор фото: Антон</p>
+              <a class="gallery-item__likes" href="#">254</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <div class="video__wrapper">
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__text">Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
+        </div>
+        <video class="video__item" width="320" height="201" poster="./img/video-mobile@1x.jpg">
+          <source src="#" type="#">
+        </video>
+        <div class="video__controls">
+          <input type="range" class="video__seek-bar" value="10">
+          <button type="button" class="video__control video__control--replay" aria-label="Replay">Replay</button>
+          <button type="button" class="video__control video__control--captions" aria-label="Captions">Captions</button>
+          <button type="button" class="video__control video__control--full-screen" aria-label="Full screen">Full screen</button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer__hashtag" href="#">#Visitsedona</a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
         </li>
-        <li class="site-menu__item">
-          <a class="site-menu__link site-menu__link--active" href="photo.html">Фото и&nbsp;видео</a>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
         </li>
-        <li class="site-menu__item">
-          <a class="site-menu__link" href="form.html">Форма отзыва</a>
-        </li>
-        <li class="site-menu__item">
-          <a class="site-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
         </li>
       </ul>
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-    </nav>
-  </header>
-
-  <main class="page-main">
-    <section class="page-intro">
-      <h2 class="page-intro__title">Фото и&nbsp;видео</h2>
-      <p class="page-intro__text">Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.</p>
-    </section>
-    <section class="gallery">
-      <ul class="gallery__list">
-        <li class="gallery__item gallery-item">
-          <div class="gallery-item__wrapper">
-            <img class="gallery-item__image" src="./img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
-            <h3 class="gallery-item__title">Неродные просторы</h3>
-            <p class="gallery-item__author">Автор фото: Борис</p>
-            <a class="gallery-item__likes" href="#">1350</a>
-          </div>
-        </li>
-        <li class="gallery__item gallery-item">
-          <div class="gallery-item__wrapper">
-            <img class="gallery-item__image" src="./img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
-            <h3 class="gallery-item__title">Местная растительность</h3>
-            <p class="gallery-item__author">Автор фото: Сергей</p>
-            <a class="gallery-item__likes" href="#">143</a>
-          </div>
-        </li>
-        <li class="gallery__item gallery-item">
-          <div class="gallery-item__wrapper">
-            <img class="gallery-item__image" src="./img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-            <h3 class="gallery-item__title">Дорога на&nbsp;север</h3>
-            <p class="gallery-item__author">Автор фото: Петр</p>
-            <a class="gallery-item__likes" href="#">96</a>
-          </div>
-        </li>
-        <li class="gallery__item gallery-item">
-          <div class="gallery-item__wrapper">
-            <img class="gallery-item__image" src="./img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
-            <h3 class="gallery-item__title">Мост дьявола</h3>
-            <p class="gallery-item__author">Автор фото: Антон</p>
-            <a class="gallery-item__likes" href="#">254</a>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="video">
-      <div class="video__wrapper">
-        <h2 class="video__title">Все еще сомневаетесь?</h2>
-        <p class="video__text">Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
       </div>
-      <video class="video__item" width="320" height="201" poster="./img/video-mobile@1x.jpg">
-        <source src="#" type="#">
-      </video>
-      <div class="video__controls">
-        <input type="range" class="video__seek-bar" value="10">
-        <button type="button" class="video__control video__control--replay" aria-label="Replay">Replay</button>
-        <button type="button" class="video__control video__control--captions" aria-label="Captions">Captions</button>
-        <button type="button" class="video__control video__control--full-screen" aria-label="Full screen">Full screen</button>
-      </div>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <a class="page-footer__hashtag" href="#">#Visitsedona</a>
-    <ul class="page-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано:</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
 </body>
 
 </html>
