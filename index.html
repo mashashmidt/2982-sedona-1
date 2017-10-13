@@ -13,7 +13,11 @@
   <div class="container">
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седоны">
+        </picture>
       </a>
       <nav class="main-nav">
         <ul class="main-nav__menu site-menu">
@@ -27,7 +31,7 @@
             <a class="site-menu__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-menu__item">
-            <a class="site-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="site-menu__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -47,7 +51,11 @@
               <h2 class="features-item__title">Настоящий городок</h2>
               <p class="features-item__text">Седона не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="features-item__image" src="./img/main-city-mobile@1x.jpg" width="320" height="260" alt="Настоящий городок">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/main-city-desktop@1x.jpg, ./img/main-city-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="./img/main-city-tablet@1x.jpg, ./img/main-city-tablet@2x.jpg">
+              <img class="features-item__image" src="./img/main-city-mobile@1x.jpg" srcset="./img/main-city-mobile@2x.jpg" alt="Настоящий городок">
+            </picture>
             <ul class="features-item__icons icons">
               <li class="icons__item">
                 <h2 class="icons__title icons__title--house">Жилье</h2>

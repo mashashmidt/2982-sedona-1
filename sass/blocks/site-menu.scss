@@ -62,7 +62,7 @@
       background-color: #669ec0;
     }
 
-    &:focus {
+    &:active {
       background-color: #5496bd;
       color: rgba($color: #ffffff, $alpha: 0.3);
     }
@@ -79,10 +79,12 @@
 
       &:hover {
         color: #a3c7de;
+        background-color: #ffffff;
       }
 
-      &:focus {
+      &:active {
         color: #c7c7c7;
+        background-color: #ffffff;
       }
 
       &--active {
