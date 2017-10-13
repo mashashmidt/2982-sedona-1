@@ -51,6 +51,10 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 @mixin number($num) {
   &:after {
     content: "— №"+$num+" —";
@@ -60,5 +64,32 @@ p {
     line-height: 1.5;
     font-weight: normal;
     padding: 20px 0;
+  }
+}
+
+@mixin backgroundWithText($txturl) {
+  background-image: $triangle-m, $txturl, url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position-y: bottom, center, bottom;
+  background-position-x: center, center, center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: $triangle-m, $txturl, url(" ../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet) {
+    background-image: $triangle-t, $txturl, url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: $triangle-t, $txturl, url(" ../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background-image: $triangle-d, $txturl, url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: $triangle-d, $txturl, url(" ../img/bg-back-desktop@2x.jpg");
+    }
   }
 }
