@@ -63,14 +63,15 @@ img {
     font-size: 14px;
     line-height: 1.5;
     font-weight: normal;
-    padding: 20px 0;
+    padding-top: 12px;
+    padding-bottom: 15px;
   }
 }
 
 @mixin backgroundWithText($txturl) {
   background-image: $triangle-m, $txturl, url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position-y: bottom, center, bottom;
+  background-position-y: bottom, 52%, bottom;
   background-position-x: center, center, center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

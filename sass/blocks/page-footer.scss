@@ -4,7 +4,8 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 244px;
+  height: 237px;
+  
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -19,6 +20,7 @@
       flex-direction: row;
       justify-content: space-between;
       width: 33%;
+      flex-grow: 1;
     }
   }
 

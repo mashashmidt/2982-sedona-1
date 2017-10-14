@@ -47,6 +47,7 @@
     @media (min-width: $tablet) {
       height: 518px;
       background-size: 100%, 460px, cover;
+      background-position-y: bottom, 46%, bottom;
     }
   }
 
@@ -55,12 +56,13 @@
     line-height: 1.4;
     color: #000000;
     font-weight: bold;
-    margin-top: 45px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 
     @media (min-width: $tablet) {
       font-size: 21px;
       line-height: 1.2;
+      margin-top: 50px;
     }
 
     &--photo {
@@ -74,6 +76,10 @@
   &__text {
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 51px;
+    }
   }
 }

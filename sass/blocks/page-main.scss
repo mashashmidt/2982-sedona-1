@@ -3,6 +3,11 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin-top: -28px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
 
   &--photo {
     font-size: 14px;

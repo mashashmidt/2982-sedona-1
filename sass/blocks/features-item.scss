@@ -19,6 +19,34 @@
     @include number(5)
   }
 
+  &:nth-child(3) {
+    padding: 25px 20px;
+  }
+
+  &:nth-child(4) {
+    padding: 28px 20px;
+  }
+
+  &:last-child {
+    padding: 25px 20px;
+  }
+
+  &:nth-child(3),
+  &:nth-child(4),
+  &:last-child {
+    @media (min-width: $tablet) {
+      padding: 46px 48px;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4),
+  &:last-child {
+    @media (min-width: $tablet) {
+      padding-bottom: 88px;
+    }
+  }
+
   &--blue {
     background-color: #81b3d2;
     display: flex;
@@ -42,8 +70,7 @@
   }
 
   &--grey {
-    background-color: #eeeeee;
-    padding: 30px 20px;
+    background-color: #eeeeee;   
     border-bottom: 1px solid #d6d6d6;
     width: 100%;
 
@@ -68,22 +95,28 @@
     font-size: 18px;
     line-height: 1.4;
     font-weight: bold;
+
+    @media (min-width: $tablet) {
+      font-size: 21px;
+      line-height: 1.2;
+      padding-bottom: 6px;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    width: 278px;
     padding: 40px 20px;
+    height: 192px;
 
     @media (min-width: $tablet) {
       width: 256px;
-      padding: 0 30px;
+      padding: 13px 30px;
     }
 
     @media (min-width: $desktop) {
       width: 400px;
-      padding: 0 60px;
+      padding: 20px 60px;
     }
   }
 

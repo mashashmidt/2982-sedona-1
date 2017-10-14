@@ -1,8 +1,21 @@
 .map {
   width: 100%;
+  position: relative;
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/icon-map-marker.svg");
+  }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url(" ../img/bg-map-mobile@2x.jpg");
@@ -10,6 +23,7 @@
 
   @media (min-width: $tablet) {
     background-image: url("../img/bg-map-tablet@1x.jpg");
+    height: 350px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url(" ../img/bg-map-tablet@2x.jpg");
