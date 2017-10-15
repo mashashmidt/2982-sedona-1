@@ -3,12 +3,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  margin-bottom: 66px;
 
   &__text-wrapper {
     width: 280px;
     text-align: center;
+    margin-top: 31px;
+    margin-bottom: 38px;
+
     @media (min-width: $tablet) {
       width: 470px;
+      margin-top: 67px;
+    }
+
+    @media (min-width: $tablet) {
+      margin-top: 70px;
     }
   }
 
@@ -54,15 +64,48 @@
     font-size: 18px;
     line-height: 1.4;
     color: #000000;
+    margin-bottom: 28px;
 
     @media (min-width: $tablet) {
       font-size: 30px;
       line-height: 0.9;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 31px;
     }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -65px;
+
+    @media (min-width: $tablet) {
+      bottom: -38px;
+    }
+
+    @media (min-width: $tablet) {
+      bottom: -34px;
+    }
+  }
+
+  &__seek-bar {
+    width: 280px;
+    height: 45px;
+    background-color: black;
+  }
+
+  &__buttons {
+    width: 280px;
+    background-color: #f2f2f2;
   }
 }

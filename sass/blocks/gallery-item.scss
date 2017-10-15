@@ -42,12 +42,51 @@
     @media (min-width: $tablet) {
       width: 100%;
       background-color: #f2f2f2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      position: relative;
+      padding: 0;
     }
   }
 
   &__image {
     width: 100%;
     height: auto;
+    margin-bottom: 16px;
+
+    @media (min-width: $desktop) {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    @media (min-width: $tablet) {
+      display: flex;
+      width: 100%;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      color: #ffffff;
+      padding-top: 16px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet) {
+      width: 80%;
+      margin: 0;
+    }
   }
 
   &__title {
@@ -59,9 +98,46 @@
     text-transform: none;
     font-weight: normal;
     color: #333333;
+
+    @media (min-width: $desktop) { 
+      color: #ffffff;
+    }
   }
 
   &__likes {
     color: #000000;
+    position: relative;
+    padding-left: 36px;
+    padding-top: 8px;
+    padding-botom: 8px;
+
+    @media (min-width: $tablet) {
+      width: 20%;
+      padding-right: 20px;
+      text-align: right;
+      padding-left: 0;
+      padding-top: 14px;
+    }
+
+    @media (min-width: $desktop) { 
+      color: #ffffff;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: red;
+      top: 4px;
+      left: 0;
+      width: 23px;
+      height: 21px;
+      background-image: url("../img/icon-likes.svg");  
+
+      @media (min-width: $tablet) {
+        top: 12px;
+        right: 45px;
+      }
+    }
   }
 }

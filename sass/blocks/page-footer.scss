@@ -1,19 +1,14 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 237px;
-  
-
-  @media (min-width: $tablet) {
-    flex-direction: row;
-    justify-content: space-around;
-    height: 120px;
-  }
+  padding: 5px 0;
 
   & > * {
+    height: 33%;
     width: 278px;
 
     @media (min-width: $tablet) {
@@ -24,6 +19,24 @@
     }
   }
 
+  &--photo {
+    margin-top: 43px;
+
+    @media (min-width: $tablet) {
+      margin-top: 12px;
+    }
+
+    @media (min-width: $tablet) {
+      margin-top: 53px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 120px;
+  }
+ 
   &__hashtag {
     display: flex;
     justify-content: center;

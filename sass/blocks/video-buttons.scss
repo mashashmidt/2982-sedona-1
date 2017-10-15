@@ -1,0 +1,61 @@
+.video-buttons {
+  display: flex;
+
+  &__button {
+    width: 70px;
+    height: 66px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+
+    &:first-child {
+      margin-right: 70px;
+    }
+
+    &--replay {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/icon-video-replay.svg");
+      }
+    }
+
+    &--captions {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 20px;
+        top: 35%;
+        left: 50%;
+        background-image: url("../img/icon-video-subtitles.svg");
+      }
+    }
+
+    &--full-screen {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 37%;
+        left: 39%;
+        background-image: url("../img/icon-video-fullscreen.svg");
+      }
+    }
+  }
+}
