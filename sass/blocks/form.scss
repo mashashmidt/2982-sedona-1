@@ -1,5 +1,5 @@
 .form {
-  width: 280px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -16,7 +16,15 @@
   &__block {
     border: none;
     margin: 0;
-    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:last-child {
+      border: none;
+    }
 
     &:nth-child(1),
     &:nth-child(3) {
@@ -33,6 +41,45 @@
 
     @media (min-width: $tablet) {
       width: 100%;
+      border: none;
+    }
+  }
+
+  &__submit {
+    width: 280px;
+    margin: 0 auto;
+    background-color: #81b3d2;
+    color: #ffffff;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 17px 0;
+    border: 0;
+    outline: none;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 58px;
+      width: 324px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 65px;
+      width: 480px;
+    }
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+      color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
     }
   }
 

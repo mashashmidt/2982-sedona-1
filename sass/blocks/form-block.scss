@@ -63,4 +63,166 @@
       }
     }
   }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #000000;
+
+    @media (min-width: $tablet) {
+      font-size: 21px;
+      line-height: 1.2;
+    }
+  }
+
+  &--review,
+  &--attractions {
+    label {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #000000;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+
+  &--introduction,
+  &--contacts {
+    input {
+      background-color: #f2f2f2;
+      border: none;
+      padding: 20px;
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #000000;
+      font-weight: bold;
+      text-transform: none;
+
+      &::placeholder  {
+        color:#000000;
+      }
+    }
+  }
+
+  &--introduction {
+    #{$block}__field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      width: 30%;
+    }
+
+    input[type="text"] {
+      width: 70%;
+    }
+
+    label[for="name"] {
+      width: 18%;
+    }
+
+    input[id="name"] {
+      width: 82%;
+    }
+  }
+
+  &--contacts {
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+    }
+
+    #{$block}__field {
+      &:after {
+        content: "";
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-color: #e6e6e6;
+      }
+    }
+  }
+
+  &--review {
+    $outer: 55px;
+    $inner: 22px;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + label:after {
+        content: "";
+        display: block;
+        width: $inner;
+        height: $inner;
+        border-radius: 50%;
+        background-color: #333333;
+        position: absolute;
+        top: calc((#{$outer} - #{$inner})/2);
+        left: calc((#{$outer} - #{$inner})/2);
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: $outer;
+        height: $outer;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--attractions {
+    input[type="checkbox"] {
+      display: none;
+
+      &:checked + label:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 16px;
+        background-image: url("../img/icon-tick.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: calc((56px - 16px)/2);
+        left: calc((56px - 24px)/2);
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 56px;
+        border-radius: 10%;
+        background-color: #f2f2f2;
+        margin-right: 23px;
+      }
+    }
+
+  }
+
+
 }

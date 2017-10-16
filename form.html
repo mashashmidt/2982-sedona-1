@@ -38,12 +38,12 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="page-intro">
-        <h2 class="page-intro__title">Оставьте свой отзыв</h2>
-        <p class="page-intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
+      <section class="page-intro page-inro--form">
+        <h2 class="page-intro__title page-intro__title--form">Оставьте свой отзыв</h2>
+        <p class="page-intro__text page-intro__text--form">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
       </section>
       <form class="form" action="/echo" method="post">
-        <fieldset class="form__block form-block">
+        <fieldset class="form__block form-block form-block--introduction">
           <legend class="form-block__title">Представьтесь:</legend>
           <div class="form-block__field">
             <label for="name">Имя*:</label>
@@ -71,25 +71,19 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__block form-block">
+        <fieldset class="form__block form-block form-block--review">
           <legend class="form-block__title">Ваше общее впечатление:</legend>
           <div class="form-block__field">
-            <label>
-              <input type="radio" name="experience" value="plus" checked>
-              <span class="radio__item">Скорее положительное</span>
-            </label>
+            <input type="radio" name="experience" id="experience-plus" value="plus" checked>
+            <label for="experience-plus" class="radio__item">Скорее положительное</label>
           </div>
           <div class="form-block__field">
-            <label>
-              <input type="radio" name="experience" value="minus">
-              <span class="radio__item">Скорее отрицательное</span>
-            </label>
+            <input type="radio" name="experience" id="experience-minus" value="minus">
+            <label for="experience-minus" class="radio__item">Скорее отрицательное</label>
           </div>
           <div class="form-block__field">
-            <label>
-              <input type="radio" name="experience" value="no-var">
-              <span class="radio__item">Затрудняюсь ответить</span>
-            </label>
+            <input type="radio" name="experience" id="experience-novar" value="no-var">
+            <label for="experience-novar" class="radio__item">Затрудняюсь ответить</label>
           </div>
         </fieldset>
         <fieldset class="form__block form-block form-block--attractions">
@@ -114,7 +108,7 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__block form-block">
+        <fieldset class="form__block form-block form-block--footer">
           <legend class="form-block__title">
             <label for="review-field">Опишите свои эмоции:</label>
           </legend>
@@ -122,7 +116,10 @@
             <textarea name="review" id="review-field" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
         </fieldset>
-        <button class="form__submit" type="submit">Отправить отзыв</button>
+        <div class="form__block form-block">
+          <button class="form__submit" type="submit">Отправить отзыв</button>
+        </div>
+
       </form>
     </main>
     <footer class="page-footer">
@@ -139,7 +136,7 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано:</p>
+        <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
       </div>
     </footer>

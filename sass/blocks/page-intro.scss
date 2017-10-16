@@ -15,9 +15,6 @@
   }
 
   &--photo {
-    font-size: 14px;
-    line-height: 1.7;
-
     @media (min-width: $tablet) {
       margin-bottom: 16px;
     }
@@ -55,7 +52,7 @@
     height: 390px;
     background-color: #6a9fc9;
     background-size: cover, 282px, cover;
-    background-position-y: bottom, 52%, bottom;    
+    background-position-y: bottom, 52%, bottom;
 
     @include backgroundWithText($text-sedona-index);
 
@@ -94,12 +91,25 @@
         margin-top: 111px;
       }
     }
+
+    &--form {
+      @media (min-width: $tablet) {
+        font-size: 30px;
+        line-height: 0.9;
+      }
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 24px;
+
+    &--photo,
+    &--form {
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
     @media (min-width: $tablet) {
       margin-bottom: 51px;
