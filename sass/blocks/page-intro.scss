@@ -93,6 +93,9 @@
     }
 
     &--form {
+      margin-top: 38px;
+      margin-bottom: 25px;
+
       @media (min-width: $tablet) {
         font-size: 30px;
         line-height: 0.9;
@@ -108,7 +111,11 @@
     &--photo,
     &--form {
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.8;
+    }
+
+    &--form {
+      margin-bottom: 16px;
     }
 
     @media (min-width: $tablet) {

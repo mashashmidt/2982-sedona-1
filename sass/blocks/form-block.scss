@@ -68,7 +68,10 @@
     font-size: 18px;
     line-height: 1.4;
     font-weight: bold;
+    text-align: center;
     color: #000000;
+    padding-top: 19px;
+    padding-bottom: 22px;
 
     @media (min-width: $tablet) {
       font-size: 21px;
@@ -93,7 +96,7 @@
     input {
       background-color: #f2f2f2;
       border: none;
-      padding: 20px;
+      padding: 17px 20px;
       font-family: "PT Sans", "Arial", sans-serif;
       font-size: 18px;
       line-height: 1.4;
@@ -111,23 +114,20 @@
     #{$block}__field {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      width: 30%;
+      margin-bottom: 21px;
     }
 
     input[type="text"] {
-      width: 70%;
+      flex-grow: 1;
+
     }
 
     label[for="name"] {
-      width: 18%;
+
     }
 
     input[id="name"] {
-      width: 82%;
+
     }
   }
 
