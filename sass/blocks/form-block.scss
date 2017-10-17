@@ -1,7 +1,235 @@
 .form-block {
   $block: &;
 
+  &--introduction,
+  &--contacts {
+    input {
+      background-color: #f2f2f2;
+      border: none;
+      outline: none;
+      height: 58px;
+      padding: 0 20px;
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #000000;
+      font-weight: bold;
+      text-transform: none;
+
+      &::placeholder  {
+        color:#000000;
+      }
+
+      &:hover {
+        background-color: #e5e5e5;
+      }
+
+      &:focus {
+        border: 4px solid #e5e5e5;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &--review,
   &--attractions {
+    label {
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #000000;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+
+  &--introduction {
+    margin-bottom: 22px;
+
+
+    #{$block}__field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      width: 70%;
+
+    }
+
+    label[for="name"] {
+
+    }
+
+    input[id="name"] {
+
+    }
+  }
+
+  &--contacts {
+    margin-bottom: 28px;
+
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+    }
+
+
+    #{$block}__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $desktop) {
+        flex-direction: row;
+      }
+    }
+
+    #{$block}__field {
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-color: #e6e6e6;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      &--phone {
+        margin-bottom: 12px;
+
+        &:after {
+          background-image: url("../img/icon-phone.svg");
+        }
+      }
+
+      &--email {
+        &:after {
+          background-image: url("../img/icon-mail.svg");
+        }
+      }
+
+      @media (min-width: $desktop) {
+        width: 50%;
+      }
+    }
+
+    label {
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &--review {
+    $outer: 55px;
+    $inner: 22px;
+    margin-bottom: 13px;
+
+    input[type="radio"] {
+      display: none;
+
+      &:active:checked + label:after {
+        background-color: #a4a4a4;
+      }
+
+      &:checked + label:after {
+        content: "";
+        display: block;
+        width: $inner;
+        height: $inner;
+        border-radius: 50%;
+        background-color: #333333;
+        position: absolute;
+        top: calc((#{$outer} - #{$inner})/2);
+        left: calc((#{$outer} - #{$inner})/2);
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      position: relative;
+
+      &:hover:before {
+        background-color: #e5e5e5;
+      }
+
+      &:active:before {
+        background-color: #d5d5d5;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: $outer;
+        height: $outer;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--attractions {
+    input[type="checkbox"] {
+      display: none;
+
+      &:active:checked + label:after {
+        opacity: 0.3;
+      }
+
+      &:checked + label:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 16px;
+        background-image: url("../img/icon-tick.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: calc((56px - 16px)/2);
+        left: calc((56px - 24px)/2);
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:hover:before {
+        background-color: #e5e5e5;
+      }
+
+      &:active:before {
+        background-color: #d5d5d5;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 56px;
+        border-radius: 10%;
+        background-color: #f2f2f2;
+        margin-right: 23px;
+      }
+    }
+
     #{$block}__wrapper {
       display: flex;
       flex-direction: column;
@@ -13,6 +241,8 @@
     }
 
     #{$block}__field {
+      margin-bottom: 24px;
+
       @media (min-width: $tablet) {
         width: 50%;
 
@@ -47,23 +277,6 @@
     }
   }
 
-  &--contacts {
-    #{$block}__wrapper {
-      display: flex;
-      flex-direction: column;
-
-      @media (min-width: $desktop) {
-        flex-direction: row;
-      }
-    }
-
-    #{$block}__field {
-      @media (min-width: $desktop) {
-        width: 50%;
-      }
-    }
-  }
-
   &__title {
     font-size: 18px;
     line-height: 1.4;
@@ -78,151 +291,4 @@
       line-height: 1.2;
     }
   }
-
-  &--review,
-  &--attractions {
-    label {
-      font-family: "PT Sans", "Arial", sans-serif;
-      font-size: 18px;
-      line-height: 1.4;
-      color: #000000;
-      font-weight: bold;
-      text-transform: none;
-    }
-  }
-
-  &--introduction,
-  &--contacts {
-    input {
-      background-color: #f2f2f2;
-      border: none;
-      padding: 17px 20px;
-      font-family: "PT Sans", "Arial", sans-serif;
-      font-size: 18px;
-      line-height: 1.4;
-      color: #000000;
-      font-weight: bold;
-      text-transform: none;
-
-      &::placeholder  {
-        color:#000000;
-      }
-    }
-  }
-
-  &--introduction {
-    #{$block}__field {
-      display: flex;
-      align-items: center;
-      margin-bottom: 21px;
-    }
-
-    input[type="text"] {
-      flex-grow: 1;
-
-    }
-
-    label[for="name"] {
-
-    }
-
-    input[id="name"] {
-
-    }
-  }
-
-  &--contacts {
-    input[type="tel"],
-    input[type="email"] {
-      width: 100%;
-    }
-
-    #{$block}__field {
-      &:after {
-        content: "";
-        display: block;
-        width: 58px;
-        height: 58px;
-        background-color: #e6e6e6;
-      }
-    }
-  }
-
-  &--review {
-    $outer: 55px;
-    $inner: 22px;
-
-    input[type="radio"] {
-      display: none;
-
-      &:checked + label:after {
-        content: "";
-        display: block;
-        width: $inner;
-        height: $inner;
-        border-radius: 50%;
-        background-color: #333333;
-        position: absolute;
-        top: calc((#{$outer} - #{$inner})/2);
-        left: calc((#{$outer} - #{$inner})/2);
-      }
-    }
-
-    label {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-      position: relative;
-
-      &:before {
-        content: "";
-        display: block;
-        width: $outer;
-        height: $outer;
-        border-radius: 50%;
-        background-color: #f2f2f2;
-        margin-right: 20px;
-      }
-    }
-  }
-
-  &--attractions {
-    input[type="checkbox"] {
-      display: none;
-
-      &:checked + label:after {
-        content: "";
-        display: block;
-        width: 24px;
-        height: 16px;
-        background-image: url("../img/icon-tick.svg");
-        background-repeat: no-repeat;
-        position: absolute;
-        top: calc((56px - 16px)/2);
-        left: calc((56px - 24px)/2);
-      }
-    }
-
-    label {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      margin-bottom: 24px;
-      position: relative;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 56px;
-        height: 56px;
-        border-radius: 10%;
-        background-color: #f2f2f2;
-        margin-right: 23px;
-      }
-    }
-
-  }
-
-
 }
