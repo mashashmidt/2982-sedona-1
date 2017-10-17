@@ -99,6 +99,12 @@
       @media (min-width: $tablet) {
         font-size: 30px;
         line-height: 0.9;
+        margin-top: 74px;
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-top: 108px;
       }
     }
   }

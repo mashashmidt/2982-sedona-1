@@ -22,6 +22,10 @@
     flex-wrap: wrap;
     position: relative;
 
+    @media (min-width: $tablet) {
+      padding: 0;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -31,7 +35,12 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
 
+    @media (min-width: $tablet) {
+      &:before {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -72,12 +81,11 @@
     outline: none;
 
     @media (min-width: $tablet) {
-      margin-bottom: 58px;
-      width: 324px;
+      width: 50%;
+      margin: 0;
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 65px;
       width: 480px;
     }
 
@@ -92,6 +100,18 @@
 
     &:disabled {
       background-color: #e5e5e5;
+    }
+  }
+
+  &__required {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      font-size: 14px;
+      line-height: 1.8;
+      width: 50%;
+      text-align: right;
     }
   }
 
