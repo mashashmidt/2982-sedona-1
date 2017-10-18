@@ -34,6 +34,12 @@ body {
   display: none;
 }
 
+.desktop-hidden {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
 a {
   text-decoration: none;
 }

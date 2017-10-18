@@ -45,7 +45,7 @@
       </section>
       <section class="gallery">
         <ul class="gallery__list">
-          <li class="gallery__item gallery-item">
+          <li class="gallery__item gallery-item gallery-item--big">
             <div class="gallery-item__wrapper">
               <picture>
                 <source media="(min-width: 1200px)" srcset="./img/photo-sunset-desktop@1x.jpg, ./img/photo-sunset-desktop@2x.jpg">
@@ -123,11 +123,9 @@
         </div>
         <div class="video__controls">
           <input type="range" class="video__seek-bar" value="10">
-          <div class="video__buttons video-buttons">
-            <button type="button" class="video-buttons__button video-buttons__button--replay" aria-label="Replay"></button>
-            <button type="button" class="video-buttons__button video-buttons__button--captions" aria-label="Captions"></button>
-            <button type="button" class="video-buttons__button video-buttons__button--full-screen" aria-label="Full screen"></button>
-          </div>
+          <button type="button" class="video__button video__button--replay" aria-label="Replay"></button>
+          <button type="button" class="video__button video__button--captions" aria-label="Captions"></button>
+          <button type="button" class="video__button video__button--full-screen" aria-label="Full screen"></button>
         </div>
       </section>
     </main>
@@ -135,18 +133,34 @@
       <a class="page-footer__hashtag" href="#">#Visitsedona</a>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">
+            <svg class="social__icon" width="18" height="14">
+              <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">
+            <svg class="social__icon" width="9" height="19">
+              <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">Youtube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Youtube">
+            <svg class="social__icon" width="20" height="14">
+              <use xlink:href="./img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <svg class="copyright__icon" width="27" height="34">
+            <use xlink:href="./img/sprite.svg#logo-academy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
   </div>
