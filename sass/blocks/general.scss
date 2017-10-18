@@ -71,7 +71,6 @@ img {
 @mixin backgroundWithText($txturl) {
   background-image: $triangle-m, $txturl, url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position-y: bottom, 44%, bottom;
   background-position-x: center, center, center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

@@ -81,7 +81,7 @@
   }
 
   &__text {
-    margin-bottom: 14px;
+    margin-bottom: 6px;
 
     @media (min-width: $tablet) {
       width: 80%;
@@ -99,17 +99,16 @@
     font-weight: normal;
     color: #333333;
 
-    @media (min-width: $desktop) { 
+    @media (min-width: $desktop) {
       color: #ffffff;
     }
   }
 
   &__likes {
     color: #000000;
-    position: relative;
-    padding-left: 36px;
+    display: flex;
     padding-top: 8px;
-    padding-botom: 8px;
+    padding-bottom: 8px;
 
     @media (min-width: $tablet) {
       width: 20%;
@@ -119,25 +118,18 @@
       padding-top: 14px;
     }
 
-    @media (min-width: $desktop) { 
+    @media (min-width: $desktop) {
       color: #ffffff;
     }
 
     &:before {
       content: "";
       display: block;
-      position: absolute;
       background-color: red;
-      top: 4px;
-      left: 0;
       width: 23px;
       height: 21px;
-      background-image: url("../img/icon-likes.svg");  
-
-      @media (min-width: $tablet) {
-        top: 12px;
-        right: 45px;
-      }
+      background-image: url("../img/icon-likes.svg");
+      margin-right: 14px;
     }
   }
 }
