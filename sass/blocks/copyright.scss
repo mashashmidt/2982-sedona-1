@@ -1,4 +1,6 @@
 .copyright {
+  $block: &;
+
   display: flex;
   flex-direction: row;
   font-size: 14px;
@@ -18,11 +20,19 @@
     width: 27px;
     height: 34px;
     background-color: #ffffff;
-    background-image: url("../img/htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center, center;
     margin-left: 12px;
+
+    &:hover {
+      #{$block}__icon {
+       fill: #81b3d2;
+      }
+    }
+
+    &:active {
+      #{$block}__icon {
+       fill: #b2b2b2;
+      }
+    }
   }
 
   &__text {

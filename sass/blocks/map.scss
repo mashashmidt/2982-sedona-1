@@ -1,11 +1,14 @@
 .map {
   width: 100%;
   position: relative;
-  background-image: url("../img/bg-map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
 
-  &:after {
+  & > iframe {
+    border: none;
+    width: 100%;
+    min-height: 350px;
+  }
+
+  /* &:after {
     content: "";
     display: block;
     position: absolute;
@@ -37,4 +40,6 @@
       background-image: url(" ../img/bg-map-desktop@2x.jpg");
     }
   }
+
+  */
 }
