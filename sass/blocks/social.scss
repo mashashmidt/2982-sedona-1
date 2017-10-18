@@ -1,4 +1,6 @@
 .social {
+  $block: &;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,21 +28,18 @@
 
     &:active {
       background-color: #5496bd;
+
+      #{$block}__icon {
+        opacity: 0.3;
+      }
     }
   }
 
   &__icon {
     position: absolute;
     fill: #ffffff;
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &--twitter {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
