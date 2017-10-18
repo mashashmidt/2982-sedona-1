@@ -10,6 +10,16 @@
 </head>
 
 <body>
+  <svg style="display:none">
+    <g id="icon-twitter">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"
+        />
+      </g>
+    </g>
+  </svg>
+
+
   <div class="container">
     <header class="page-header">
       <a class="page-header__logo">
@@ -67,7 +77,8 @@
               </li>
               <li class="icons__item">
                 <h2 class="icons__title icons__title--burger">Еда</h2>
-                <p class="icons__text">Всегда заказывайте<br> фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+                <p class="icons__text">Всегда заказывайте
+                  <br> фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
               </li>
             </ul>
           </li>
@@ -110,7 +121,11 @@
       <a class="page-footer__hashtag" href="#">#Visitsedona</a>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">Twitter</a>
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy" aria-label="Twitter">
+            <svg class="social__icon social__icon--twitter" width="18" height="14">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">Facebook</a>

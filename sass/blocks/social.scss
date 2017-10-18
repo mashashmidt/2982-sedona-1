@@ -18,5 +18,29 @@
     height: 48px;
     background-color: #81b3d2;
     font-size: 0;
+    position: relative;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    fill: #ffffff;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--twitter {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
