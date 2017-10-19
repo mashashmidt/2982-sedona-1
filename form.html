@@ -21,6 +21,7 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav__menu site-menu site-menu--mobile">
+          <!-- скрыть меню - site-menu--hidden -->
           <li class="site-menu__item">
             <a class="site-menu__link" href="index.html">Главная</a>
           </li>
@@ -62,7 +63,8 @@
           <legend class="form-block__title">Контактная информация:</legend>
           <div class="form-block__wrapper">
             <div class="form-block__field form-block__field--phone">
-              <label for="tel"><span class="desktop-hidden">Контактный </span>телефон*:</label>
+              <label for="tel">
+                <span class="desktop-hidden">Контактный </span>телефон*:</label>
               <input type="tel" name="tel" placeholder="Введите телефон" required>
             </div>
             <div class="form-block__field form-block__field--email">
@@ -120,7 +122,6 @@
           <button class="form__submit" type="submit">Отправить отзыв</button>
           <p class="form__required">* &mdash; обязательные поля</p>
         </div>
-
       </form>
     </main>
     <footer class="page-footer">

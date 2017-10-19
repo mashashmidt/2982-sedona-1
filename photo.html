@@ -20,7 +20,7 @@
         </picture>
       </a>
       <nav class="main-nav">
-        <ul class="main-nav__menu site-menu site-menu--mobile">
+        <ul class="main-nav__menu site-menu site-menu--mobile"> <!-- скрыть меню - site-menu--hidden -->
           <li class="site-menu__item">
             <a class="site-menu__link" href="index.html">Главная</a>
           </li>
@@ -47,65 +47,89 @@
         <ul class="gallery__list">
           <li class="gallery__item gallery-item gallery-item--big">
             <div class="gallery-item__wrapper">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="./img/photo-sunset-desktop@1x.jpg, ./img/photo-sunset-desktop@2x.jpg">
-                <source media="(min-width: 768px)" srcset="./img/photo-sunset-tablet@1x.jpg, ./img/photo-sunset-tablet@2x.jpg">
-                <img class="gallery-item__image" src="./img/photo-sunset-mobile@1x.jpg" srcset="./img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы">
-              </picture>
+              <a class="fullscreen-image" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-sunset-desktop@1x.jpg 1x, ./img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/photo-sunset-tablet@1x.jpg 1x, ./img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="gallery-item__image" src="./img/photo-sunset-mobile@1x.jpg" srcset="./img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы">
+                </picture>
+              </a>
               <div class="gallery-item__description">
                 <div class="gallery-item__text">
                   <h3 class="gallery-item__title">Неродные просторы</h3>
                   <p class="gallery-item__author">Автор фото: Борис</p>
                 </div>
-                <a class="gallery-item__likes" href="#">1350</a>
+                <a class="gallery-item__likes" href="#">
+                  <svg class="gallery-item__icon" width="27" height="20">
+                    <use xlink:href="./img/sprite.svg#gallery-likes"></use>
+                  </svg>
+                  1350</a>
               </div>
             </div>
           </li>
           <li class="gallery__item gallery-item">
             <div class="gallery-item__wrapper">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="./img/photo-cactus-desktop@1x.jpg, ./img/photo-cactus-desktop@2x.jpg">
-                <source media="(min-width: 768px)" srcset="./img/photo-cactus-tablet@1x.jpg, ./img/photo-cactus-tablet@2x.jpg">
-                <img class="gallery-item__image" src="./img/photo-cactus-mobile@1x.jpg" srcset="./img/photo-cactus-mobile@2x.jpg" alt="Местная растительность">
-              </picture>
+              <a class="fullscreen-image" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-cactus-desktop@1x.jpg 1x, ./img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/photo-cactus-tablet@1x.jpg 1x, ./img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="gallery-item__image" src="./img/photo-cactus-mobile@1x.jpg" srcset="./img/photo-cactus-mobile@2x.jpg" alt="Местная растительность">
+                </picture>
+              </a>
               <div class="gallery-item__description">
                 <div class="gallery-item__text">
                   <h3 class="gallery-item__title">Местная растительность</h3>
                   <p class="gallery-item__author">Автор фото: Сергей</p>
                 </div>
-                <a class="gallery-item__likes" href="#">143</a>
+                <a class="gallery-item__likes" href="#">
+                  <svg class="gallery-item__icon" width="27" height="20">
+                    <use xlink:href="./img/sprite.svg#gallery-likes"></use>
+                  </svg>
+                  143</a>
               </div>
             </div>
           </li>
           <li class="gallery__item gallery-item">
             <div class="gallery-item__wrapper">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="./img/photo-roads-desktop@1x.jpg, ./img/photo-roads-desktop@2x.jpg">
-                <source media="(min-width: 768px)" srcset="./img/photo-roads-tablet@1x.jpg, ./img/photo-roads-tablet@2x.jpg">
-                <img class="gallery-item__image" src="./img/photo-roads-mobile@1x.jpg" srcset="./img/photo-roads-mobile@2x.jpg" alt="Дорога на север">
-              </picture>
+              <a class="fullscreen-image" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-roads-desktop@1x.jpg 1x, ./img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/photo-roads-tablet@1x.jpg 1x, ./img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="gallery-item__image" src="./img/photo-roads-mobile@1x.jpg" srcset="./img/photo-roads-mobile@2x.jpg" alt="Дорога на север">
+                </picture>
+              </a>
               <div class="gallery-item__description">
                 <div class="gallery-item__text">
                   <h3 class="gallery-item__title">Дорога на&nbsp;север</h3>
                   <p class="gallery-item__author">Автор фото: Петр</p>
                 </div>
-                <a class="gallery-item__likes" href="#">96</a>
+                <a class="gallery-item__likes" href="#">
+                  <svg class="gallery-item__icon" width="27" height="20">
+                    <use xlink:href="./img/sprite.svg#gallery-likes"></use>
+                  </svg>
+                  96</a>
               </div>
             </div>
           </li>
           <li class="gallery__item gallery-item">
             <div class="gallery-item__wrapper">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="./img/photo-bridge-desktop@1x.jpg, ./img/photo-bridge-desktop@2x.jpg">
-                <source media="(min-width: 768px)" srcset="./img/photo-bridge-tablet@1x.jpg, ./img/photo-bridge-tablet@2x.jpg">
-                <img class="gallery-item__image" src="./img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
-              </picture>
+              <a class="fullscreen-image" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-bridge-desktop@1x.jpg 1x, ./img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/photo-bridge-tablet@1x.jpg 1x, ./img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="gallery-item__image" src="./img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+                </picture>
+              </a>
               <div class="gallery-item__description">
                 <div class="gallery-item__text">
                   <h3 class="gallery-item__title">Мост дьявола</h3>
                   <p class="gallery-item__author">Автор фото: Антон</p>
                 </div>
-                <a class="gallery-item__likes" href="#">254</a>
+                <a class="gallery-item__likes" href="#">
+                  <svg class="gallery-item__icon" width="27" height="20">
+                    <use xlink:href="./img/sprite.svg#gallery-likes"></use>
+                  </svg>
+                  254</a>
               </div>
             </div>
           </li>
@@ -118,14 +142,26 @@
         </div>
         <div class="video__video-wrapper">
           <video class="video__item">
-            <source src="#" type="#">
+            <source src="./1.mp4">
           </video>
         </div>
         <div class="video__controls">
-          <input type="range" class="video__seek-bar" value="10">
-          <button type="button" class="video__button video__button--replay" aria-label="Replay"></button>
-          <button type="button" class="video__button video__button--captions" aria-label="Captions"></button>
-          <button type="button" class="video__button video__button--full-screen" aria-label="Full screen"></button>
+          <input type="range" class="video__seek-bar">
+          <button type="button" class="video__button video__button--replay" aria-label="Replay">
+            <svg class="video__icon" width="16" height="20">
+              <use xlink:href="./img/sprite.svg#button-replay"></use>
+            </svg>
+          </button>
+          <button type="button" class="video__button video__button--captions" aria-label="Captions">
+            <svg class="video__icon video__icon--captions" width="32" height="20">
+              <use xlink:href="./img/sprite.svg#button-subtitle"></use>
+            </svg>
+          </button>
+          <button type="button" class="video__button video__button--full-screen" aria-label="Full screen">
+            <svg class="video__icon video__icon--fullscreen" width="20" height="20">
+              <use xlink:href="./img/sprite.svg#button-fullscreen"></use>
+            </svg>
+          </button>
         </div>
       </section>
     </main>
