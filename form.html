@@ -65,11 +65,21 @@
             <div class="form-block__field form-block__field--phone">
               <label for="tel">
                 <span class="desktop-hidden">Контактный </span>телефон*:</label>
-              <input type="tel" name="tel" placeholder="Введите телефон" required>
+              <input type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+              <div class="form-block__icon">
+                <svg class="form-block__icon-phone" width="18" height="18">
+                  <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
             </div>
             <div class="form-block__field form-block__field--email">
               <label for="email">Электронная почта*:</label>
-              <input type="email" name="email" placeholder="Введите e-mail" required>
+              <input type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              <div class="form-block__icon">
+                <svg class="form-block__icon-email" width="16" height="12">
+                  <use xlink:href="./img/sprite.svg#icon-email"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -158,6 +168,24 @@
         </a>
       </div>
     </footer>
+    <section class="pop-up pop-up--success">
+      <!-- открыть окно - pop-up--show -->
+      <div class="pop-up__text-wrapper">
+        <h3 class="pop-up__title">Ваш отзыв отправлен!</h3>
+        <p class="pop-up__text">Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.</p>
+      </div>
+      <div class="pop-up__button-wrapper">
+        <button class="pop-up__button" type="button">Закрыть окно</button>
+      </div>
+    </section>
+    <section class="pop-up pop-up--failure">
+      <!-- открыть окно - pop-up--show -->
+      <div class="pop-up__text-wrapper">
+        <h3 class="pop-up__title">что-то пошло не&nbsp;так!</h3>
+        <p class="pop-up__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
+      </div>
+      <button class="pop-up__button" type="button">Ок</button>
+    </section>
   </div>
 </body>
 
