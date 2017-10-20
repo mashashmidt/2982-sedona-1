@@ -1,25 +1,36 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 244px;
-
-  @media (min-width: $tablet) {
-    flex-direction: row;
-    justify-content: space-around;
-    height: 120px;
-  }
+  height: 237px;
+  padding: 5px 0;
 
   & > * {
+    height: 33%;
     width: 278px;
 
     @media (min-width: $tablet) {
       flex-direction: row;
       justify-content: space-between;
       width: 33%;
+      flex-grow: 1;
     }
+  }
+
+  &--photo {
+    margin-top: 43px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 105px;
   }
 
   &__hashtag {

@@ -1,4 +1,6 @@
 .social {
+  $block: &;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,9 +16,30 @@
 
   &__link {
     display: block;
-    width: 47px;
-    height: 47px;
+    width: 46px;
+    height: 48px;
     background-color: #81b3d2;
     font-size: 0;
+    position: relative;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+
+      #{$block}__icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    fill: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

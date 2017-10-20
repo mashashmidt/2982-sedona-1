@@ -3,6 +3,32 @@
   display: flex;
   flex-direction: column;
 
+  &--hidden {
+    display: none;
+  }
+
+  &--mobile {
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 55px;
+      background-image: url("../img/icon-cross.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
   @media (min-width: $tablet) {
     flex-direction: row;
     background-color: #ffffff;
@@ -16,16 +42,37 @@
     line-height: 2.2;
     color: #ffffff;
     font-weight: bold;
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      & > a {
+        padding: 7px 0;
+      }
+    }
 
     &:nth-child(2) {
       @media (min-width: $tablet) {
-        margin-right: 100px;
+        margin-right: 75px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-right: 164px;
       }
     }
 
     &:nth-child(3) {
       @media (min-width: $tablet) {
-        margin-left: 100px;
+        margin-left: 80px;
       }
     }
 
@@ -35,34 +82,25 @@
       color: #000000;
       font-weight: bold;
       flex-grow: 1;
-      width: 25%;
+      width: 20%;
       background-color: #ffffff;
-    }
-
-    &:first-child a {
-      border-top: none;
-    }
-
-    &:last-child a {
-      border-bottom: none;
+      border: none;
     }
   }
 
   &__link {
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 8px 0;
     text-align: center;
     color: #ffffff;
-    border-top: 1px solid #9ac2db;
-    border-bottom: 1px solid #678fa8;
     background-color: #81b3d2;
 
     &:hover {
       background-color: #669ec0;
     }
 
-    &:focus {
+    &:active {
       background-color: #5496bd;
       color: rgba($color: #ffffff, $alpha: 0.3);
     }
@@ -79,10 +117,12 @@
 
       &:hover {
         color: #a3c7de;
+        background-color: #ffffff;
       }
 
-      &:focus {
+      &:active {
         color: #c7c7c7;
+        background-color: #ffffff;
       }
 
       &--active {

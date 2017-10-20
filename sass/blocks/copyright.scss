@@ -1,4 +1,6 @@
 .copyright {
+  $block: &;
+
   display: flex;
   flex-direction: row;
   font-size: 14px;
@@ -6,17 +8,31 @@
   color: #000000;
   justify-content: center;
   align-items: center;
+  padding: 0;
+
+  @media (min-width: $desktop) {
+    justify-content: flex-end;
+    padding-right: 44px;
+  }
 
   &__link {
     font-size: 0;
     width: 27px;
     height: 34px;
     background-color: #ffffff;
-    background-image: url("../img/htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center, center;
-    margin-left: 10px;
+    margin-left: 12px;
+
+    &:hover {
+      #{$block}__icon {
+       fill: #81b3d2;
+      }
+    }
+
+    &:active {
+      #{$block}__icon {
+       fill: #b2b2b2;
+      }
+    }
   }
 
   &__text {

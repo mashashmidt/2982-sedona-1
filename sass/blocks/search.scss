@@ -5,6 +5,15 @@
   align-items: center;
   text-align: center;
   width: 100%;
+  padding-top: 28px;
+
+  @media (min-width: $tablet) {
+    padding-top: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+  }
 
   & > * {
     width: 280px;
@@ -18,16 +27,27 @@
     font-size: 21px;
     line-height: 1.2;
     color: #000000;
+    margin-bottom: 22px;
 
     @media (min-width: $tablet) {
       font-size: 30px;
       line-height: 0.9;
+      margin-bottom: 33px;
     }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.7;
+    margin-bottom: 37px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 41px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 46px;
+    }
   }
 
   &__button {
@@ -36,7 +56,16 @@
     font-size: 21px;
     line-height: 1.2;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 17px 0;
+    margin-bottom: 48px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 58px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 65px;
+    }
 
     &:hover {
       background-color: #669ec0;

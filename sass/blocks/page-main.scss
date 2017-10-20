@@ -3,9 +3,9 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin-top: -28px;
 
-  &--photo {
-    font-size: 14px;
-    line-height: 1.7;
+  @media (min-width: $tablet) {
+    margin-top: 0;
   }
 }
