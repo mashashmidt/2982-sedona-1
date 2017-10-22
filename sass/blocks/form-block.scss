@@ -21,8 +21,9 @@
       font-weight: bold;
       text-transform: none;
 
-      &::placeholder  {
+      &::placeholder {
         color:#000000;
+        opacity: 1; /*firefox*/
       }
 
       &:hover {
@@ -436,6 +437,7 @@
 
     textarea {
       width: 100%;
+      resize: vertical;
       min-height: 160px;
       background-color: #f2f2f2;
       border: none;

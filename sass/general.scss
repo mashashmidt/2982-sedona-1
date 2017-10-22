@@ -1,15 +1,13 @@
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff") format("woff");
-  src: url("../fonts/ptsans.woff2") format("woff2");
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff") format("woff");
-  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -78,22 +76,17 @@ img {
   background-image: $triangle-m, $txturl, url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-x: center, center, center;
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: $triangle-m, $txturl, url(" ../img/bg-back-mobile@2x.jpg");
   }
-
   @media (min-width: $tablet) {
     background-image: $triangle-t, $txturl, url("../img/bg-back-tablet@1x.jpg");
-
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: $triangle-t, $txturl, url(" ../img/bg-back-tablet@2x.jpg");
     }
   }
-
   @media (min-width: $desktop) {
     background-image: $triangle-d, $txturl, url("../img/bg-back-desktop@1x.jpg");
-
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: $triangle-d, $txturl, url(" ../img/bg-back-desktop@2x.jpg");
     }
