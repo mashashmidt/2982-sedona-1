@@ -215,7 +215,7 @@
     }
 
     @media (min-width: $tablet) {
-      width: unset;
+      width: auto;
       order: 2;
       flex-grow: 1;
       height: 93px;

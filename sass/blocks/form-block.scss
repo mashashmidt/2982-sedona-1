@@ -213,7 +213,7 @@
         margin-bottom: 11px;
 
         @media (min-width: $desktop) {
-          width: unset;
+          width: auto;
           margin: 0;
           margin-right: 20px;
         }
@@ -223,7 +223,7 @@
         width: calc(100% - 58px);
 
         @media (min-width: $desktop) {
-          width: unset;
+          width: auto;
         }
       }
 
