@@ -23,33 +23,5 @@
     @media (min-width: $tablet) {
       display: none;
     }
-
-
-    /*
-    div {
-      height: 0px;
-      border: 1.5px solid red;
-      width: 30px;
-      display: block;
-      position: absolute;
-      transition: all 300ms cubic-bezier(.61, .01, .42, 1);
-      background: #ffffff;
-      &:nth-child(1) {
-        top: 0;
-        left: 0;
-      }
-      &:nth-child(2) {
-        top: 8px;
-        left: 0;
-      }
-      &:nth-child(3) {
-        top: 16px;
-        left: 0;
-      }
-      @media (min-width: $tablet) {
-        display: none;
-      }
-    }
-    */
   }
 }

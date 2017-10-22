@@ -3,35 +3,27 @@
   &:first-child .features-item__title {
     @include number(1)
   }
-
   &:nth-child(2) .features-item__title {
     @include number(2)
   }
-
   &:nth-child(3) .features-item__title {
     @include number(3)
   }
-
   &:nth-child(4) .features-item__title {
     @include number(4)
   }
-
   &:nth-child(5) .features-item__title {
     @include number(5)
   }
-
   &:nth-child(3) {
     padding: 26px 20px;
   }
-
   &:nth-child(4) {
     padding: 28px 20px;
   }
-
   &:last-child {
     padding: 25px 20px;
   }
-
   &:nth-child(3),
   &:nth-child(4),
   &:last-child {
@@ -39,19 +31,16 @@
       padding: 46px 48px;
     }
   }
-
   &:nth-child(3),
   &:nth-child(4),
   &:last-child {
     @media (min-width: $tablet) {
       padding-bottom: 45px;
     }
-
     @media (min-width: $desktop) {
       padding-bottom: 66px;
     }
   }
-
   &--blue {
     background-color: #81b3d2;
     display: flex;
@@ -60,36 +49,88 @@
     align-items: center;
     color: #ffffff;
 
+    #{$block}__image {
+      background-color: black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 256px;
+      width: 100%;
+
+
+      @media (min-width: $tablet) {
+        width: unset;
+        flex-grow: 1;
+      }
+
+      &--city {
+        background-image: url("../img/main-city-mobile@1x.jpg");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url(" ../img/main-city-mobile@2x.jpg");
+        }
+
+        @media (min-width: $tablet) {
+          background-image: url("../img/main-city-tablet@1x.jpg");
+
+          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url(" ../img/main-city-tablet@2x.jpg");
+          }
+        }
+
+        @media (min-width: $desktop) {
+          background-image: url("../img/main-city-desktop@1x.jpg");
+
+          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url(" ../img/main-city-desktop@2x.jpg");
+          }
+        }
+      }
+
+      &--bridge {
+        background-image: url("../img/main-bridge-mobile@1x.jpg");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url(" ../img/main-bridge-mobile@2x.jpg");
+        }
+
+        @media (min-width: $tablet) {
+          background-image: url("../img/main-bridge-tablet@1x.jpg");
+
+          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url(" ../img/main-bridge-tablet@2x.jpg");
+          }
+        }
+
+        @media (min-width: $desktop) {
+          background-image: url("../img/main-bridge-desktop@1x.jpg");
+
+          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url(" ../img/main-bridge-desktop@2x.jpg");
+          }
+        }
+      }
+    }
+
     /*выравнивание заголовка pixel perfect*/
     #{$block}__title {
       @media (min-width: $desktop) {
         width: 216px;
       }
     }
-
     @media (min-width: $tablet) {
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
     }
-
-    & > picture {
-      @media (min-width: $tablet) {
-        flex-grow: 1;
-        height: 256px;
-      }
-    }
   }
-
   &--grey {
     background-color: #eeeeee;
     border-bottom: 1px solid #d6d6d6;
     width: 100%;
-
     &:last-child {
       border: none;
     }
-
     @media (min-width: $tablet) {
       border: none;
       width: 33%;
@@ -98,56 +139,41 @@
       flex-direction: column;
       align-items: center;
     }
-
-     /*выравнивание заголовка pixel perfect*/
-     #{$block}__title {
+    /*выравнивание заголовка pixel perfect*/
+    #{$block}__title {
       @media (min-width: $desktop) {
         width: 160px;
       }
     }
   }
-
   &--reversed {
     @media (min-width: $tablet) {
       flex-direction: row-reverse;
     }
   }
-
   &__title {
     font-size: 18px;
     line-height: 1.4;
     font-weight: bold;
-
     @media (min-width: $tablet) {
       font-size: 21px;
       line-height: 1.2;
       padding-bottom: 6px;
     }
   }
-
   &__container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
     height: 192px;
-
     @media (min-width: $tablet) {
       width: 256px;
       padding: 13px 30px;
     }
-
     @media (min-width: $desktop) {
       align-items: center;
       width: 400px;
       padding: 20px 60px;
-    }
-  }
-
-  &__image {
-    width: 100%;
-
-    @media (min-width: $tablet) {
-      flex-grow: 1;
     }
   }
 }

@@ -50,6 +50,7 @@
       height: 500px;
       background: black;
       background-image: url("../img/video-tablet@1x.jpg");
+      background-size: cover; /*opera*/
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url(" ../img/video-tablet@2x.jpg");
