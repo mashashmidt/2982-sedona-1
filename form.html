@@ -44,8 +44,8 @@
         <p class="page-intro__text page-intro__text--form">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
       </section>
       <form class="form" action="/echo" method="post">
-        <fieldset class="form__block form-block form-block--introduction">
-          <legend class="form-block__title">Представьтесь:</legend>
+        <div role="group" aria-labelledby="legend-introduction" class="form__block form-block form-block--introduction">
+          <div id="legend-introduction" class="form-block__title">Представьтесь:</div>
           <div class="form-block__field">
             <label for="name">Имя*:</label>
             <input type="text" id="name" name="name" placeholder="Петр" required>
@@ -58,9 +58,9 @@
             <label for="patronymic">Отчество:</label>
             <input type="text" id="patronymic" name="patronymic" placeholder="Александрович">
           </div>
-        </fieldset>
-        <fieldset class="form__block form-block form-block--contacts">
-          <legend align="center" class="form-block__title">Контактная информация:</legend>
+        </div>
+        <div role="group" aria-labelledby="legend-contacts"  class="form__block form-block form-block--contacts">
+          <div id="legend-contacts" align="center" class="form-block__title">Контактная информация:</div>
           <div class="form-block__wrapper">
             <div class="form-block__field form-block__field--phone">
               <label for="tel">
@@ -82,9 +82,9 @@
               </div>
             </div>
           </div>
-        </fieldset>
-        <fieldset class="form__block form-block form-block--experience">
-          <legend class="form-block__title">Ваше общее впечатление:</legend>
+        </div>
+        <div role="group" aria-labelledby="legend-emotions"  class="form__block form-block form-block--experience">
+          <div id="legend-emotions" class="form-block__title">Ваше общее впечатление:</div>
           <div class="form-block__field">
             <input type="radio" name="experience" id="experience-plus" value="plus" checked>
             <label for="experience-plus" class="form-block__radio-item">Скорее положительное</label>
@@ -97,9 +97,9 @@
             <input type="radio" name="experience" id="experience-novar" value="no-var">
             <label for="experience-novar" class="form-block__radio-item">Затрудняюсь ответить</label>
           </div>
-        </fieldset>
-        <fieldset class="form__block form-block form-block--attractions">
-          <legend align="center" class="form-block__title">Посещенные достопримечательности:</legend> <!--align="center" - FIREFOX -->
+        </div>
+        <div role="group" aria-labelledby="legend-attractions"  class="form__block form-block form-block--attractions">
+          <div id="legend-attractions" align="center" class="form-block__title">Посещенные достопримечательности:</div> <!--align="center" - FIREFOX -->
           <div class="form-block__wrapper">
             <!-- https://stackoverflow.com/questions/28078681/why-cant-fieldset-be-flex-containers -->
             <div class="form-block__field">
@@ -119,15 +119,15 @@
               <label for="red-cliff">Красные скалы</label>
             </div>
           </div>
-        </fieldset>
-        <fieldset class="form__block form-block form-block--review">
-          <legend align="center" class="form-block__title">
+        </div>
+        <div role="group" aria-labelledby="legend-review"  class="form__block form-block form-block--review">
+          <div id="legend-review" align="center" class="form-block__title">
             <label for="review-field">Опишите свои эмоции:</label>
-          </legend>
+          </div>
           <div class="form-block__field">
             <textarea name="review" id="review-field" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
-        </fieldset>
+        </div>
         <div class="form__block form-block form-block--footer">
           <button class="form__submit" type="submit">Отправить отзыв</button>
           <p class="form__required">* &mdash; обязательные поля</p>
